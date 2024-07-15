@@ -171,5 +171,28 @@ SELECT a.first_name, a.last_name
                                 INNER JOIN category AS c ON fc.category_id = c.category_id
                                 WHERE c.name = 'Horror');
     
-    
+-- 24. BONUS: Find the title of the movies that are comedies and have a duration longer than 180 minutes in the film table.
 
+-- This is the answer using the view that already has both data.
+SELECT title
+	FROM film_list
+    WHERE category = 'Comedy' AND length > 180;
+
+-- And here's the answer if you didn't have that view.
+
+SELECT f.title
+	FROM film AS f
+    INNER JOIN film_category AS fc ON f.film_id = fc.film_id
+    INNER JOIN category AS c ON fc.category_id = c.category_id
+    WHERE c.name = 'Comedy'AND f.length > 180;
+
+-- 25. BONUS: Find all actors who have acted together in at least one movie. The query must show the first and last name of the actors and the number of movies in which they have acted together.
+    
+SELECT CONCAT(a1.first_name, ' ', a1.last_name) AS actor1,
+       CONCAT(a2.first_name, ' ', a2.last_name) AS actor2,
+       COUNT(*) AS movies_together
+	FROM film_actor AS fa1
+	INNER JOIN film_actor AS fa2 ON fa1.film_id = fa2.film_id AND fa1.actor_id < fa2.actor_id
+	INNER JOIN actor AS a1 ON fa1.actor_id = a1.actor_id
+	INNER JOIN actor AS a2 ON fa2.actor_id = a2.actor_id
+	GROUP BY actor1, actor2;
