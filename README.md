@@ -1,16 +1,19 @@
+## 👋 About Me
+Hi, I'm Bea and I'm training to become a data analyst. In this repository you will find my final evaluation of Module 2 on SQL.
+
 # Final Evaluation Module 2
 
 ### SQL Review Exercise using the Sakila BDD.
 Sakila is a sample database that simulates a movie rental store. It contains tables such as film, actor, customer, rental, category, among others. These tables contain information about movies, actors, customers, rentals and more, and are used to perform queries and data analysis in the context of a movie rental store.
 
 
-## Technologies
+## ⚙ Technologies
 
 - MySQL 
 - MySQL Workbench
 
 
-## Installation
+## 🛠 Installation
 
 1. Install **MySQL** and **MySQL Workbench**:
 - Download and install MySQL from [MySQL Community Downloads](https://dev.mysql.com/downloads/mysql/).
@@ -24,7 +27,7 @@ Sakila is a sample database that simulates a movie rental store. It contains tab
 - Open the `mod_2_final_evaluation.sql` file in *MySQL Workbench* and run the SQL queries to get results.
 
     
-## Exercises
+## 📝 Exercises
 
 - [x] 1. Select all the movie names without duplicates.
 - [x] 2. Displays the names of all movies that have a "PG-13" rating.
@@ -57,7 +60,7 @@ Sakila is a sample database that simulates a movie rental store. It contains tab
 
 
 
-## Authors
+## ✒ Authors
 
 - Beatriz Díaz- *Resolution of queries*-[BeaDataArtist](https://github.com/BeaDataArtist)
 - Adalab- *Examining body*-[Adalab](https://github.com/Adalab)
